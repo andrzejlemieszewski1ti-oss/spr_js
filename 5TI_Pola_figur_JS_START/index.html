@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pola figur</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="skrypt.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>Pola figur płaskich</h2>
+    </header>
+
+    <main>
+        <nav aria-label="Menu główne">
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="index.html">Prostokąt i trójkąt</a></li>
+            </ul>
+        </nav>
+
+        <section aria-label="Wybór figury">
+            <img id="figura" src="1d.bmp" alt="Figura">
+            <div class="wybor-figury">
+                <button id="wybierz-trojkat" type="button">
+                    <img class="miniatura" src="1m.bmp" alt="Wybierz trójkąt">
+                </button>
+                <button id="wybierz-prostokat" type="button">
+                    <img class="miniatura" src="2m.bmp" alt="Wybierz prostokąt">
+                </button>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Pole prostokąta / pole trójkąta</h3>
+
+            <label for="pierwszy-wymiar">Bok prostokąta / podstawa trójkąta:</label>
+            <input id="pierwszy-wymiar" type="number" step="any">
+
+            <label for="drugi-wymiar">Drugi bok prostokąta / wysokość trójkąta:</label>
+            <input id="drugi-wymiar" type="number" step="any">
+
+            <button id="oblicz" type="button">Oblicz</button>
+            <p id="wynik" aria-live="polite"></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Autor: ................................</p>
+    </footer>
+</body>
+</html>

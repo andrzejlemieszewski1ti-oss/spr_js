@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+footer {
+    padding: 5px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+nav,
+section,
+aside {
+    min-height: 500px;
+}
+
+nav,
+aside {
+    background-color: dodgerblue;
+}
+
+section {
+    background-color: skyblue;
+    text-align: center;
+}
+
+aside {
+    padding: 0 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3::first-letter {
+    font-size: 200%;
+}
+
+p {
+    font-size: 150%;
+}
+
+#figura {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.wybor-figury button {
+    max-width: 45%;
+    margin: 5px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.miniatura {
+    display: block;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px dimgray;
+}
+
+label,
+input {
+    display: block;
+}
+
+input,
+#oblicz {
+    margin: 10px;
+}
+
+input {
+    max-width: calc(100% - 20px);
+}
+
+@media (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav,
+    section,
+    aside {
+        min-height: auto;
+    }
+
+    section,
+    aside {
+        padding-bottom: 15px;
+    }
+}
