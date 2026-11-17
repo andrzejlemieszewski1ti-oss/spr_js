@@ -3,24 +3,25 @@ let malyTrojkat = document.getElementById("wybierz-trojkat")
 let malyProsokat = document.getElementById("wybierz-prostokat")
 
 malyTrojkat.addEventListener("click" , function(){
-    figura.src = "1m.bmp"
+    figura.src = "1d.bmp"
 })
 
 malyProsokat.addEventListener("click" , function(){
-    figura.src = "2m.bmp"
+    figura.src = "2d.bmp"
 })
 
-let podstawaBok = Number(document.getElementById("pierwszy-wymiar"))
-let wysokoscBok = Number(document.getElementById("drugi-wymiar"))
 
-let pole = 0;
+
 
 function oblicz(){
-if(figura.src.includes("2m.bmp")){
+let podstawaBok = Number(document.getElementById("pierwszy-wymiar").value)
+let wysokoscBok = Number(document.getElementById("drugi-wymiar").value)
+let pole = 0;
+if(figura.src.includes("2d.bmp")){
     pole = wysokoscBok * podstawaBok;
-    document.getElementById("wynik").innerHTML = pole
 } else{
     pole = 0.5 * wysokoscBok * podstawaBok;
-    document.getElementById("wynik").innerHTML = pole
 }
+document.getElementById("wynik").innerHTML = pole;
 }
+document.getElementById("oblicz").addEventListener("click", oblicz);
